@@ -6,7 +6,7 @@ const MailGen = require("mailgen");
 
 const home = async (req, res) => {
   try {
-    res.status(200).send("Welcome to the Server-side");
+    res.status(200).json({msg:"Welcome to the Server-side"});
   } catch (error) {
     console.log(error);
   }
