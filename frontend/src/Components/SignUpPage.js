@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
 import { useProfileContext } from "../Contexts/ProfileContext";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,13 @@ const SignUpPage = () => {
   const navigate = useNavigate();
   // State variables to store form validation errors
   const [errors, setErrors] = useState({});
+
+  // Calling server on mount to decrease the handleSubmit response time
+  useEffect(()=>{
+    fetch('https://dribbble-clone-otoh.onrender.com/api/info')
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+  },[]);
 
   // Function to handle form input changes
   const handleInputChange = (e) => {
@@ -54,7 +61,7 @@ const SignUpPage = () => {
       console.log("Form submitted:", formData);
       // window.location.href = "/create-profile";
       try {
-        const response = await fetch(`http://localhost:4000/api/info/signup`, {
+        const response = await fetch(`https://dribbble-clone-otoh.onrender.com/api/info/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
