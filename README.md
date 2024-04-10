@@ -5,6 +5,9 @@
 <h3> Other tools : NodeMailer(email sending using node.js) , Cloudinary(Image uploading widget) </h3>
 <h3>Backend deployed at render : https://dribbble-clone-otoh.onrender.com</h3>
 <h3>Frontend deployed at netlify : https://66165bfa8fb74803dcc7dc33--endearing-cat-7728cc.netlify.app/</h3>
+<div>
 <b>Description : </b>
 <h5>Since the backend is deployed at a free hosting service(render), it can sometimes take upto 10-20sec for the sign-up form to complete authentication with the backend</h5>
 <h5>On successful signup the user recieves a confirmation email on the entered email address(Make sure it is a valid email address)</h5>
+<h5>Responsive Web-Design</h5>
+</div>
